@@ -27,6 +27,7 @@ var Agent = require('coderally-agent');
 var AIUtils = Agent.AIUtils;
 
 app.use(express.static(__dirname + '/public'));
+app.use('/scripts', express.static(__dirname + '/node_modules/ace-builds/src/'));
 
 app.use('/route', route);
 

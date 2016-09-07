@@ -9,7 +9,8 @@
     "cfenv": "1.0.x",
     "express": "4.12.x",
     "socket.io": "^1.4.5",
-    "coderally-agent": "git+https://github.com/ssh24/coderally-agent.git"
+    "coderally-agent": "git+https://github.com/ssh24/coderally-agent.git",
+    "ace-builds": "git://github.com/ajaxorg/ace-builds.git"
   },
   "repository": {},
   "engines": {
