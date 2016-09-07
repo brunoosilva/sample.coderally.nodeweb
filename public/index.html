@@ -1,0 +1,434 @@
+<!-- /**
+* (C) Copyright IBM Corporation 2016.
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/ -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CodeRally</title>
+    <link rel="stylesheet" href="css/semantic.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="ui grid container">
+        <div class="sixteen wide column">
+            <h2 id="page-title" class="ui header">
+                <img src="nodejs-logo.png" class="ui image">
+                NodeJs Code Rally
+            </h2>
+        </div>
+        <div id="auth-seg" class="sixteen wide column">
+            <div class="ui segments">
+                <div class="ui five top attached steps">
+                    <div class="active step">
+                        <i class="lock icon"></i>
+                        <div class="content">
+                            <div class="title">Authenticate</div>
+                            <div class="description">Set up your account</div>
+                        </div>
+                    </div>
+                    <div class="disabled step">
+                        <i class="car icon"></i>
+                        <div class="content">
+                            <div class="title">Pick</div>
+                            <div class="description">Choose your track and vehicle</div>
+                        </div>
+                    </div>
+                    <div class="disabled step">
+                        <i class="code icon"></i>
+                        <div class="content">
+                            <div class="title">Code</div>
+                            <div class="description">Modify the parameters</div>
+                        </div>
+                    </div>
+                    <div class="disabled step">
+                        <i class="checkered flag icon"></i>
+                        <div class="content">
+                            <div class="title">Race</div>
+                            <div class="description">Put your AI to the test!</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui very padded segment">
+                    <div class="ui medium header">Select a Code Rally server: </div>
+                    <select id="server-dd" class="ui dropdown" onChange="javascript:changeTextBoxState(this)">
+                        <option value="challenge-one.coderallycloud.com">challenge-one.coderallycloud.com</option>
+                        <option value="coderallydev.mybluemix.net">coderallydev.mybluemix.net</option>
+                        <option value="customServer">Use a custom server</option>
+                    </select>
+                    <div id="custom-server-form">
+                        <div class="ui medium header">Enter custom server:</div>
+                        <div class="ui action input">
+                            <input id="server" type="text" disabled>
+                            <button id="server-connection" class="ui button" disabled>Check server connection</button>
+                        </div>
+                    </div>
+                    <div id="username-form">
+                        <div class="ui medium header">Enter your username to get started:</div>
+                        <div class="ui action input">
+                            <input id="username" type="text" placeholder="Username...">
+                            <button id="auth-button" class="ui button">Authenticate</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui secondary clearing segment">
+                    <button id="auth-next-btn" class="ui right labeled icon teal right floated disabled button">
+                        <i class="right arrow icon"></i> Continue
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="select-seg" class="sixteen wide column">
+            <div class="ui segments">
+                <div class="ui five top attached steps">
+                    <div class="disabled step">
+                        <i class="lock icon"></i>
+                        <div class="content">
+                            <div class="title">Authenticate</div>
+                            <div class="description">Set up your account</div>
+                        </div>
+                    </div>
+                    <div class="active step">
+                        <i class="car icon"></i>
+                        <div class="content">
+                            <div class="title">Pick</div>
+                            <div class="description">Choose your track and vehicle</div>
+                        </div>
+                    </div>
+                    <div class="disabled step">
+                        <i class="code icon"></i>
+                        <div class="content">
+                            <div class="title">Code</div>
+                            <div class="description">Modify the parameters</div>
+                        </div>
+                    </div>
+                    <div class="disabled step">
+                        <i class="checkered flag icon"></i>
+                        <div class="content">
+                            <div class="title">Race</div>
+                            <div class="description">Put your AI to the test!</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui very padded segment">
+                    <div class="ui medium header">Pick a track: </div>
+                    <table id="track-table" class="ui table">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img data-track-id="circuit" src="tracks/circuit.jpg" height="80" width="100">
+                                </td>
+                                <td>
+                                    <img data-track-id="desert" src="tracks/desert.jpg" height="80" width="100">
+                                </td>
+                                <td>
+                                    <img data-track-id="desk" src="tracks/desk.jpg" height="80" width="100">
+                                </td>
+                                <td>
+                                    <img data-track-id="figure8" src="tracks/figure8.jpg" height="80" width="100">
+                                </td>
+                                <td>
+                                    <img data-track-id="lowearthorbit" src="tracks/lowearthorbit.jpg" height="80" width="100">
+                                </td>
+                                <td>
+                                    <img data-track-id="pond" src="tracks/pond.jpg" height="80" width="100">
+                                </td>
+                                <td>
+                                    <img data-track-id="sky" src="tracks/sky.jpg" height="80" width="100">
+                                </td>
+                                <td>
+                                    <img data-track-id="space" src="tracks/space.jpg" height="80" width="100">
+                                </td>
+                                <td>
+                                    <img data-track-id="water" src="tracks/water.jpg" height="80" width="100">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div id="car-select" class="ui medium header" style="display: none">Pick your vehicle: </div>
+                    <table id="car-table" class="ui table" style="display: none">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img id="img1">
+                                </td>
+                                <td>
+                                    <img id="img2">
+                                </td>
+                                <td>
+                                    <img id="img3">
+                                </td>
+                                <td>
+                                    <img id="img4">
+                                </td>
+                                <td>
+                                    <img id="img5">
+                                </td>
+                                <td>
+                                    <img id="img6">
+                                </td>
+                                <td>
+                                    <img id="img7">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="ui secondary clearing segment">
+                    <button id="select-next-btn" class="ui right labeled icon teal right floated disabled button">
+                        <i class="right arrow icon"></i> Continue
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="code-seg" class="sixteen wide column">
+            <div class="ui segments">
+                <div class="ui five top attached steps">
+                    <div class="disabled step">
+                        <i class="lock icon"></i>
+                        <div class="content">
+                            <div class="title">Authenticate</div>
+                            <div class="description">Set up your account</div>
+                        </div>
+                    </div>
+                    <div class="disabled step">
+                        <i class="car icon"></i>
+                        <div class="content">
+                            <div class="title">Pick</div>
+                            <div class="description">Choose your track and vehicle</div>
+                        </div>
+                    </div>
+                    <div class="active step">
+                        <i class="code icon"></i>
+                        <div class="content">
+                            <div class="title">Code</div>
+                            <div class="description">Modify the parameters</div>
+                        </div>
+                    </div>
+                    <div class="disabled step">
+                        <i class="checkered flag icon"></i>
+                        <div class="content">
+                            <div class="title">Race</div>
+                            <div class="description">Put your AI to the test!</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui very padded segment">
+                    <div class="ui medium header">Modify your vehicle: </div>
+                    <div id="editor"></div>
+                    <button id="copy-code-btn" class="ui button">
+                        <i class="copy icon"></i>Copy code to clipboard
+                    </button>
+                    <div id="success-copy" style="display:none;color:green">Successfully copied to clipboard</div>
+                </div>
+                <div class="ui secondary clearing segment">
+                    <button id="code-next-btn" class="ui right labeled icon teal right floated button">
+                        <i class="right arrow icon"></i> Continue
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="race-seg" class="sixteen wide column">
+            <div class="ui segments">
+                <div class="ui five top attached steps">
+                    <div class="disabled step">
+                        <i class="lock icon"></i>
+                        <div class="content">
+                            <div class="title">Authenticate</div>
+                            <div class="description">Set up your account</div>
+                        </div>
+                    </div>
+                    <div class="disabled step">
+                        <i class="car icon"></i>
+                        <div class="content">
+                            <div class="title">Pick</div>
+                            <div class="description">Choose your track and vehicle</div>
+                        </div>
+                    </div>
+                    <div class="disabled step">
+                        <i class="code icon"></i>
+                        <div class="content">
+                            <div class="title">Code</div>
+                            <div class="description">Modify the parameters</div>
+                        </div>
+                    </div>
+                    <div class="active step">
+                        <i class="checkered flag icon"></i>
+                        <div class="content">
+                            <div class="title">Race</div>
+                            <div class="description">Put your AI to the test!</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui very padded segment">
+                    <div class="ui medium header">Confirm your choices and start racing!</div>
+                    <div class="ui grid">
+                        <div class="six wide column">
+                            <h3 class="ui header">
+                                <i class="user circular icon"></i>
+                                <div id="user-summary" class="content"></div>
+                            </h3>
+                            <h3 class="ui header">
+                            <img id="track-img" src="" class="ui circular image">
+                                Your track
+                            </h3>
+                            <h3 class="ui header">
+                            <img id="ride-img" src="" class="ui circular image">
+                                Your ride
+                            </h3>
+                        </div>
+                        <div class="ten wide column">
+                            <div id="editor_result"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui secondary clearing segment">
+                    <button id="race-play-btn" class="ui right labeled icon blue right floated button">
+                        <i class="checkered flag icon"></i> Begin race
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="log-seg" class="sixteen wide column">
+            <div class="ui very padded center aligned segment">
+                <div class="ui top left attached label">Real time race stats</div>
+                <div class="ui statistics">
+                    <div class="statistic">
+                        <div class="value">
+                            <i class="trophy icon"></i> <span id="place"></span>
+                        </div>
+                        <div class="label">
+                            Current Position
+                        </div>
+                    </div>
+                    <div class="statistic">
+                        <div class="value">
+                            <i class="road icon"></i> <span id="lap"></span>
+                        </div>
+                        <div class="label">
+                            Current Lap
+                        </div>
+                    </div>
+                </div>
+                <div class="ui segments">
+                    <div class="ui padded segment">
+                        <div class="ui medium header">Real Time Race Logs</div>
+                        <div class="race-start-btn">
+                            <button id="start-race" class="ui right labeled icon blue center floated button disabled">
+                                <i class="checkered flag icon"></i> Watch the race live
+                            </button>
+                        </div>
+                    </div>
+                    <div class="ui very padded segment">
+                        <div class="ui list"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui inverted vertical footer very padded segment">
+        <div class="ui center aligned container">
+            <div class="ui stackable inverted divided grid">
+                <div class="eight wide column">
+                    <h4 class="ui inverted header">Get the Code!</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item"><i class="github icon"></i> GitHub</a>
+                    </div>
+                </div>
+                <div class="eight wide column">
+                    <h4 class="ui inverted header">Official Code Rally Docs</h4>
+                    <a href="https://www.ibm.com/developerworks/community/blogs/code-rally/entry/landing?lang=en">IBM Code Rally</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    function changeTextBoxState(server) {
+        if (server.value == 'customServer') {
+            $("#username").val("");
+            $('#username').attr("disabled", true);
+
+            $("#auth-button").removeClass("positive");
+            $("#auth-button").removeClass("negative");
+            $("#auth-button").text("Authenticate");
+            $("#auth-button").addClass('disabled');
+
+            $("#auth-next-btn").addClass("disabled");
+
+            $("#server").attr("disabled", false);
+            $("#server-connection").attr("disabled", false);
+        } else {
+            $("#username").val("");
+            $('#username').attr("disabled", false);
+
+            $("#auth-button").removeClass("positive");
+            $("#auth-button").removeClass("negative");
+            $("#auth-button").text("Authenticate");
+            $("#auth-button").removeClass('disabled');
+
+            $("#auth-next-btn").addClass("disabled");
+
+            $("#server").val("");
+            $("#server").attr("disabled", true);
+
+            $("#server-connection").attr("disabled", true);
+            $("#server-connection").removeClass('positive');
+            $("#server-connection").text('Check server connection');
+        }
+    }
+    </script>
+    <script src="js/jquery-2.2.0.min.js"></script>
+    <script src="js/semantic.min.js"></script>
+    <script src="js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+    var editor_js = ace.edit("editor");
+
+    editor_js.setTheme("ace/theme/monokai");
+    editor_js.getSession().setMode("ace/mode/json");
+    editor_js.getSession().setOption("useWorker", false);
+
+    var editor_result = ace.edit("editor_result");
+
+    editor_result.setTheme("ace/theme/monokai");
+    editor_result.getSession().setMode("ace/mode/json");
+    editor_result.getSession().setOption("useWorker", false);
+    editor_result.setReadOnly(true);
+    </script>
+    <script>
+    $('.ui.dropdown').dropdown();
+
+    $('#auth-next-btn').on('click', function() {
+        $('#auth-seg').fadeOut('fast', function() {
+            $('#select-seg').fadeIn('slow');
+        });
+    });
+    $('#select-next-btn').on('click', function() {
+        $('#select-seg').fadeOut('fast', function() {
+            $('#code-seg').fadeIn('slow');
+        });
+    });
+    $('#code-next-btn').on('click', function() {
+        $('#code-seg').fadeOut('fast', function() {
+            $('#race-seg').fadeIn('slow');
+        });
+    });
+    </script>
+    <script src="js/auth.js"></script>
+    <script src="js/engine.js" defer></script>
+    <script src="/socket.io/socket.io.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+  {
+    "vehicles": [{
+      "name": "boat_black",
+      "objectDir": "./game-assets/tracks/water/vehicleInfo/boat_blackObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/water/vehicleInfo/boat_black.json",
+      "imageDir": "vehicles/boat_black.png"
+    }, {
+      "name": "boat_blue",
+      "objectDir": "./game-assets/tracks/water/vehicleInfo/boat_blueObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/water/vehicleInfo/boat_blue.json",
+      "imageDir": "vehicles/boat_blue.png"
+    }, {
+      "name": "boat_green",
+      "objectDir": "./game-assets/tracks/water/vehicleInfo/boat_greenObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/water/vehicleInfo/boat_green.json",
+      "imageDir": "vehicles/boat_green.png"
+    }, {
+      "name": "boat_orange",
+      "objectDir": "./game-assets/tracks/water/vehicleInfo/boat_orangeObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/water/vehicleInfo/boat_orange.json",
+      "imageDir": "vehicles/boat_orange.png"
+    }, {
+      "name": "boat_purple",
+      "objectDir": "./game-assets/tracks/water/vehicleInfo/boat_purpleObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/water/vehicleInfo/boat_purple.json",
+      "imageDir": "vehicles/boat_purple.png"
+    }, {
+      "name": "boat_white",
+      "objectDir": "./game-assets/tracks/water/vehicleInfo/boat_whiteObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/water/vehicleInfo/boat_white.json",
+      "imageDir": "vehicles/boat_white.png"
+    }, {
+      "name": "boat_yellow",
+      "objectDir": "./game-assets/tracks/water/vehicleInfo/boat_yellowObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/water/vehicleInfo/boat_yellow.json",
+      "imageDir": "vehicles/boat_yellow.png"
+    }]
+  }

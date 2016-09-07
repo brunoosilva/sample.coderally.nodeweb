@@ -1,0 +1,38 @@
+  {
+    "vehicles": [{
+      "name": "buggy_black",
+      "objectDir": "./game-assets/tracks/desert/vehicleInfo/buggy_blackObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/desert/vehicleInfo/buggy_black.json",
+      "imageDir": "vehicles/buggy_black.png"
+    }, {
+      "name": "buggy_blue",
+      "objectDir": "./game-assets/tracks/desert/vehicleInfo/buggy_blueObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/desert/vehicleInfo/buggy_blue.json",
+      "imageDir": "vehicles/buggy_blue.png"
+    }, {
+      "name": "buggy_green",
+      "objectDir": "./game-assets/tracks/desert/vehicleInfo/buggy_greenObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/desert/vehicleInfo/buggy_green.json",
+      "imageDir": "vehicles/buggy_green.png"
+    }, {
+      "name": "buggy_orange",
+      "objectDir": "./game-assets/tracks/desert/vehicleInfo/buggy_orangeObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/desert/vehicleInfo/buggy_orange.json",
+      "imageDir": "vehicles/buggy_orange.png"
+    }, {
+      "name": "buggy_pink",
+      "objectDir": "./game-assets/tracks/desert/vehicleInfo/buggy_pinkObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/desert/vehicleInfo/buggy_pink.json",
+      "imageDir": "vehicles/buggy_pink.png"
+    }, {
+      "name": "buggy_purple",
+      "objectDir": "./game-assets/tracks/desert/vehicleInfo/buggy_purpleObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/desert/vehicleInfo/buggy_purple.json",
+      "imageDir": "vehicles/buggy_purple.png"
+    }, {
+      "name": "buggy_teal",
+      "objectDir": "./game-assets/tracks/desert/vehicleInfo/buggy_tealObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/desert/vehicleInfo/buggy_teal.json",
+      "imageDir": "vehicles/buggy_teal.png"
+    }]
+  }

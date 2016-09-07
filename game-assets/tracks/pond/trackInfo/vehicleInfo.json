@@ -1,0 +1,38 @@
+  {
+    "vehicles": [{
+      "name": "blue_dragonfly",
+      "objectDir": "./game-assets/tracks/pond/vehicleInfo/blue_dragonflyObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/pond/vehicleInfo/blue_dragonfly.json",
+      "imageDir": "vehicles/blue_dragonfly.png"
+    }, {
+      "name": "blue_ladybug",
+      "objectDir": "./game-assets/tracks/pond/vehicleInfo/blue_ladybugObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/pond/vehicleInfo/blue_ladybug.json",
+      "imageDir": "vehicles/blue_ladybug.png"
+    }, {
+      "name": "bumblebee",
+      "objectDir": "./game-assets/tracks/pond/vehicleInfo/bumblebeeObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/pond/vehicleInfo/bumblebee.json",
+      "imageDir": "vehicles/bumblebee.png"
+    }, {
+      "name": "green_dragonfly",
+      "objectDir": "./game-assets/tracks/pond/vehicleInfo/green_dragonflyObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/pond/vehicleInfo/green_dragonfly.json",
+      "imageDir": "vehicles/green_dragonfly.png"
+    }, {
+      "name": "monarch_butterfly",
+      "objectDir": "./game-assets/tracks/pond/vehicleInfo/monarch_butterflyObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/pond/vehicleInfo/monarch_butterfly.json",
+      "imageDir": "vehicles/monarch_butterfly.png"
+    }, {
+      "name": "red_ladybug",
+      "objectDir": "./game-assets/tracks/pond/vehicleInfo/red_ladybugyObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/pond/vehicleInfo/red_ladybug.json",
+      "imageDir": "vehicles/red_ladybug.png"
+    }, {
+      "name": "yellow_ladybug",
+      "objectDir": "./game-assets/tracks/pond/vehicleInfo/yellow_ladybugObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/pond/vehicleInfo/yellow_ladybug.json",
+      "imageDir": "vehicles/yellow_ladybug.png"
+    }]
+  }
