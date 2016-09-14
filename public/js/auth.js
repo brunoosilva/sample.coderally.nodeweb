@@ -19,7 +19,11 @@ var server = '';
 $('#username-form button').on('click', function() {
   $('#username-form button').addClass('loading');
   username = $('#username-form input').val();
-  server = $('#server-dd').val();
+  if ($('#server-dd').val() == 'customServer'){
+    server = $('#server').val();
+  }
+  else
+    server = $('#server-dd').val();
 
   $.ajax({
     url: 'http://' + server + '/CodeRallyWeb/GetUser',
@@ -71,4 +75,5 @@ $("#username").on('click', function() {
   $("#auth-button").removeClass('positive');
   $("#auth-button").removeClass('negative');
   $("#auth-button").text('Authenticate');
+  $("#auth-button").removeClass('disabled');
 });

@@ -199,6 +199,8 @@ $('#race-play-btn').on('click', function() {
   });
 
   socket.on('race-start', function(raceID) {
+    $('#race-wait').css('display', 'none');
+    $('#race-start-btn').css('display', 'block');
     $('#start-race').removeClass('disabled');
     $('#start-race').on('click', function() {
       window.open('videoStream.html?=' + raceID + "&" + server, '_blank');

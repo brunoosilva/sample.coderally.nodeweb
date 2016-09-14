@@ -25,8 +25,7 @@
 <body>
     <div class="ui grid container">
         <div class="sixteen wide column">
-            <h2 id="page-title" class="ui header">
-                <img src="nodejs-logo.png" class="ui image">
+            <h2 id="page-title" class="ui header" style="text-align: center;">
                 NodeJs Code Rally
             </h2>
         </div>
@@ -326,11 +325,12 @@
                 <div class="ui segments">
                     <div class="ui padded segment">
                         <div class="ui medium header">Real Time Race Logs</div>
-                        <div class="race-start-btn">
+                        <div id="race-start-btn" style="display: none;">
                             <button id="start-race" class="ui right labeled icon blue center floated button disabled">
                                 <i class="checkered flag icon"></i> Watch the race live
                             </button>
                         </div>
+                        <h2 id="race-wait">Waiting for race to begin ... </h2>
                     </div>
                     <div class="ui very padded segment">
                         <div class="ui list"></div>
