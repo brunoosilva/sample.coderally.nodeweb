@@ -1,0 +1,38 @@
+  {
+    "vehicles": [{
+      "name": "blue_orb",
+      "objectDir": "./game-assets/tracks/circuit/vehicleInfo/blue_orbObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/circuit/vehicleInfo/blue_orb.json",
+      "imageDir": "vehicles/blue_orb.png"
+    }, {
+      "name": "green_orb",
+      "objectDir": "./game-assets/tracks/circuit/vehicleInfo/green_orbObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/circuit/vehicleInfo/green_orb.json",
+      "imageDir": "vehicles/green_orb.png"
+    }, {
+      "name": "red_orb",
+      "objectDir": "./game-assets/tracks/circuit/vehicleInfo/red_orbObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/circuit/vehicleInfo/red_orb.json",
+      "imageDir": "vehicles/red_orb.png"
+    }, {
+      "name": "orange_orb",
+      "objectDir": "./game-assets/tracks/circuit/vehicleInfo/orange_orbObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/circuit/vehicleInfo/orange_orb.json",
+      "imageDir": "vehicles/orange_orb.png"
+    }, {
+      "name": "turqousie_orb",
+      "objectDir": "./game-assets/tracks/circuit/vehicleInfo/turqousie_orbObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/circuit/vehicleInfo/turqousie_orb.json",
+      "imageDir": "vehicles/turqousie_orb.png"
+    }, {
+      "name": "violet_orb",
+      "objectDir": "./game-assets/tracks/circuit/vehicleInfo/violet_orbObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/circuit/vehicleInfo/violet_orb.json",
+      "imageDir": "vehicles/violet_orb.png"
+    }, {
+      "name": "yellow_orb",
+      "objectDir": "./game-assets/tracks/circuit/vehicleInfo/yellow_orbObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/circuit/vehicleInfo/yellow_orb.json",
+      "imageDir": "vehicles/yellow_orb.png"
+    }]
+  }

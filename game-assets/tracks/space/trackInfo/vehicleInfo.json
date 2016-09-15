@@ -1,0 +1,33 @@
+  {
+    "vehicles": [{
+      "name": "blue_spaceship",
+      "objectDir": "./game-assets/tracks/space/blue_spaceshipObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/space/vehicleInfo/blue_spaceship.json",
+      "imageDir": "vehicles/blue_spaceship.png"
+    }, {
+      "name": "green_spaceship",
+      "objectDir": "./game-assets/tracks/space/green_spaceshipObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/space/vehicleInfo/green_spaceship.json",
+      "imageDir": "vehicles/green_spaceship.png"
+    }, {
+      "name": "red_spaceship",
+      "objectDir": "./game-assets/tracks/space/red_spaceshipObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/space/vehicleInfo/red_spaceship.json",
+      "imageDir": "vehicles/red_spaceship.png"
+    }, {
+      "name": "orange_spaceship",
+      "objectDir": "./game-assets/tracks/space/orange_spaceshipObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/space/vehicleInfo/orange_spaceship.json",
+      "imageDir": "vehicles/orange_spaceship.png"
+    }, {
+      "name": "teal_spaceship",
+      "objectDir": "./game-assets/tracks/space/teal_spaceshipObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/space/vehicleInfo/teal_spaceship.json",
+      "imageDir": "vehicles/teal_spaceship.png"
+    }, {
+      "name": "triangular_spaceship",
+      "objectDir": "./game-assets/tracks/space/triangular_spaceshipObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/space/vehicleInfo/triangular_spaceship.json",
+      "imageDir": "vehicles/triangular_spaceship.png"
+    }]
+  }

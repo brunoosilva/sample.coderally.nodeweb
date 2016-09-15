@@ -1,0 +1,38 @@
+  {
+    "vehicles": [{
+      "name": "car_blue",
+      "objectDir": "./game-assets/tracks/figure8/vehicleInfo/car_blueObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/figure8/vehicleInfo/car_blue.json",
+      "imageDir": "vehicles/car_blue.png"
+    }, {
+      "name": "car_grey",
+      "objectDir": "./game-assets/tracks/figure8/vehicleInfo/car_greyObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/figure8/vehicleInfo/car_grey.json",
+      "imageDir": "vehicles/car_grey.png"
+    }, {
+      "name": "car_orange",
+      "objectDir": "./game-assets/tracks/figure8/vehicleInfo/car_orangeObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/figure8/vehicleInfo/car_orange.json",
+      "imageDir": "vehicles/car_orange.png"
+    }, {
+      "name": "car_purple",
+      "objectDir": "./game-assets/tracks/figure8/vehicleInfo/car_purpleObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/figure8/vehicleInfo/car_purple.json",
+      "imageDir": "vehicles/car_purple.png"
+    }, {
+      "name": "car_red",
+      "objectDir": "./game-assets/tracks/figure8/vehicleInfo/car_redObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/figure8/vehicleInfo/car_red.json",
+      "imageDir": "vehicles/car_red.png"
+    }, {
+      "name": "car_teal",
+      "objectDir": "./game-assets/tracks/figure8/vehicleInfo/car_tealObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/figure8/vehicleInfo/car_teal.json",
+      "imageDir": "vehicles/car_teal.png"
+    }, {
+      "name": "car_yellow",
+      "objectDir": "./game-assets/tracks/figure8/vehicleInfo/car_yellowObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/figure8/vehicleInfo/car_yellow.json",
+      "imageDir": "vehicles/car_yellow.png"
+    }]
+  }

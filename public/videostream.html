@@ -1,0 +1,62 @@
+<!-- /**
+* (C) Copyright IBM Corporation 2016.
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/ -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CodeRally Live Race</title>
+    <style>
+    body {
+        overflow: hidden;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+    }
+    </style>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="js/streamVideo.js"></script>
+</head>
+
+<body>
+    <canvas id="videoStreamCanvas"></canvas>
+    <script>
+    var canvasID = "videoStreamCanvas";
+
+    window.addEventListener('resize', resizeCanvas, false);
+
+    function resizeCanvas() {
+        var canvas = document.getElementById(canvasID);
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+
+    var canvas = document.getElementById(canvasID);
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    var link = window.location.href;
+    var server = link.split('&')[1];
+    var raceId = link.split('&')[0].split('?=')[1];
+
+    codeRallyWebURL = server + "/CodeRallyWeb"
+
+    streamVideo(codeRallyWebURL, raceId, canvasID);
+    </script>
+</body>
+
+</html>

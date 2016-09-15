@@ -1,0 +1,38 @@
+  {
+    "vehicles": [{
+      "name": "orbiter_blue",
+      "objectDir": "./game-assets/tracks/lowearthorbit/vehicleInfo/orbiter_blueObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/lowearthorbit/vehicleInfo/orbiter_blue.json",
+      "imageDir": "vehicles/orbiter_blue.png"
+    }, {
+      "name": "orbiter_brown",
+      "objectDir": "./game-assets/tracks/lowearthorbit/vehicleInfo/orbiter_brownObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/lowearthorbit/vehicleInfo/orbiter_brown.json",
+      "imageDir": "vehicles/orbiter_brown.png"
+    }, {
+      "name": "orbiter_green",
+      "objectDir": "./game-assets/tracks/lowearthorbit/vehicleInfo/orbiter_greenObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/lowearthorbit/vehicleInfo/orbiter_green.json",
+      "imageDir": "vehicles/orbiter_green.png"
+    }, {
+      "name": "orbiter_orange",
+      "objectDir": "./game-assets/tracks/lowearthorbit/vehicleInfo/orbiter_orange.json",
+      "vehicleInfoDir": "./game-assets/tracks/lowearthorbit/vehicleInfo/orbiter_orange.json",
+      "imageDir": "vehicles/orbiter_orange.png"
+    }, {
+      "name": "orbiter_pink",
+      "objectDir": "./game-assets/tracks/lowearthorbit/vehicleInfo/orbiter_pinkObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/lowearthorbit/vehicleInfo/orbiter_pink.json",
+      "imageDir": "vehicles/orbiter_pink.png"
+    }, {
+      "name": "orbiter_purple",
+      "objectDir": "./game-assets/tracks/lowearthorbit/vehicleInfo/orbiter_purpleObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/lowearthorbit/vehicleInfo/orbiter_purple.json",
+      "imageDir": "vehicles/orbiter_purple.png"
+    }, {
+      "name": "orbiter_white",
+      "objectDir": "./game-assets/tracks/lowearthorbit/vehicleInfo/orbiter_whiteObject.json",
+      "vehicleInfoDir": "./game-assets/tracks/lowearthorbit/vehicleInfo/orbiter_white.json",
+      "imageDir": "vehicles/orbiter_white.png"
+    }]
+  }

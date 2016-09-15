@@ -1,0 +1,8 @@
+{
+   "name": "boat_purple",
+   "acceleration":"100",
+   "weight":"200",
+   "armor":"0",
+   "traction":"100",
+   "turning":"5000"
+}
