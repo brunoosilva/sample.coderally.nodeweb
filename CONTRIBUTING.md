@@ -1,1 +1,1 @@
-If you'd like to contribute to the project, see our contributor guidelines.
+If you'd like to contribute to the project, see our [contributor guidelines](https://github.com/WASdev/wasdev.github.io/blob/master/CONTRIBUTING.md).
