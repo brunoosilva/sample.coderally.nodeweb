@@ -48,4 +48,4 @@ And that's it, You're good to go!
 # Credits
 
 Ivy Ho, Sakib Hasan, Laven Sathiyanathan, Karan (S.) Randhawa, Kelvin Chan, Fady Abdel Malik
->>>>>>> 6f30ece... Initial commit
+
