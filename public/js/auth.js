@@ -19,10 +19,9 @@ var server = '';
 $('#username-form button').on('click', function() {
   $('#username-form button').addClass('loading');
   username = $('#username-form input').val();
-  if ($('#server-dd').val() == 'customServer'){
+  if ($('#server-dd').val() == 'customServer') {
     server = $('#server').val();
-  }
-  else
+  } else
     server = $('#server-dd').val();
 
   $.ajax({
