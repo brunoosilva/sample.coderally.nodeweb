@@ -33,13 +33,15 @@ $('#upload-next-btn').on('click', function() {
     vehicleOptions: selectedVehicleTitle,
     server: server
   });
+  
+  var raceVideoStreamUrl = "/CodeRallyWeb/racevideostream.html?race_id=";
 
   socket.on('race-start', function(raceID) {
     $('#race-wait').css('display', 'none');
     $('#race-start-btn').css('display', 'block');
     $('#start-race').removeClass('disabled');
     $('#start-race').on('click', function() {
-      window.open("http://" + server + "/CodeRallyWeb/racevideostream.html?race_id=" +
+      window.open("http://" + server + raceVideoStreamUrl +
         raceID, '_blank');
     });
   });
@@ -57,6 +59,7 @@ $('#upload-next-btn').on('click', function() {
   });
 
   socket.on('race-end', function(raceID) {
+    raceVideoStreamUrl = "/CodeRallyWeb/racevideo.html?race_id=";
     $('#log-seg .ui.list').prepend('<div class="item">The race has ended</div>');
     setTimeout(function() {
       window.open("http://" + server +
