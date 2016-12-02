@@ -1,19 +1,21 @@
 {
-  "name": "coderallyweb",
-  "version": "1.0.0",
-  "description": "Code Rally web application based on express.js",
-  "scripts": {
-    "start": "node app.js"
-  },
-  "dependencies": {
-    "cfenv": "1.0.x",
-    "express": "4.12.x",
-    "socket.io": "^1.4.5",
-    "coderally-agent": "git+https://github.com/ssh24/coderally-agent.git",
-    "ace-builds": "git://github.com/ajaxorg/ace-builds.git"
-  },
-  "repository": {},
-  "engines": {
-    "node": "0.12.x"
-  }
+    "name": "coderallyweb",
+    "version": "1.0.0",
+    "description": "Code Rally web application based on express.js",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "dependencies": {
+        "ace-builds": "git://github.com/ajaxorg/ace-builds.git",
+        "cfenv": "1.0.x",
+        "coderally-agent": "git+https://github.com/ssh24/coderally-agent.git",
+        "express": "4.12.x",
+        "formidable": "git+https://github.com/felixge/node-formidable.git",
+        "opener": "^1.4.2",
+        "socket.io": "^1.4.5"
+    },
+    "repository": {},
+    "engines": {
+        "node": "0.12.x"
+    }
 }

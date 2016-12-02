@@ -13,6 +13,7 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
+
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,400italic,300italic,300);
 
 /*font-weight: 300;
@@ -41,13 +42,14 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-#username-form {
-    margin-top: 60px;
-    margin-bottom: 20px;
+#upload-input {
+    display: none;
 }
 
+#username-form,
+#agent-form,
 #custom-server-form {
-    margin-top: 60px;
+    margin-top: 40px;
     margin-bottom: 20px;
 }
 
@@ -93,6 +95,7 @@ table td:hover {
 
 #race-seg,
 #select-seg,
+#upload-seg,
 #code-seg,
 #log-seg {
     display: none;

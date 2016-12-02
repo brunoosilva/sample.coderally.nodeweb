@@ -73,11 +73,11 @@ function CarControl (obj) {
 	}
 
 	self.setBrakePercent = function (brakePercent) {
-		control.carBrakePercent = brakePercent/100;
+		control.carBrakePercent = (brakePercent/100).toFixed(2);
 	}
 
 	self.setAccelerationPercent = function (accelPercent) {
-		control.carAccelPercent = accelPercent/100;
+		control.carAccelPercent = (accelPercent/100).toFixed(2);
 	}
 
 	self.setControl = function (obj) {

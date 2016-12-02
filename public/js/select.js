@@ -113,12 +113,11 @@ $('#track-table td img').on('click', function() {
   });
 });
 
-// click on car 
+// click on car
 $('#car-table td img').on('click', function() {
   $('#car-table td img').removeClass('selected-vehicle');
   $(this).addClass('selected-vehicle');
 
-  var dirPath = './public/js';
   var selectedVehicleTitle = $(this).attr('title');
   var downloadLink = $(this).attr('alt');
   var selectedVehicleImg = $(this).attr('src');
@@ -133,95 +132,4 @@ $('#car-table td img').on('click', function() {
   val = JSON.stringify(o, null, 4);
   editor_js.setValue(val);
   $('#select-next-btn').removeClass('disabled');
-});
-
-// click on going to the code page
-$('#code-next-btn').on('click', function() {
-  editor_result.setValue(editor_js.getValue());
-  $('#user-summary').text(username);
-});
-
-// click on the editor
-$('#editor').on('click', function() {
-  $('#success-copy').css('display', 'none');
-});
-
-// click on copy code
-$('#copy-code-btn').on('click', function() {
-  var curr = editor_js.getValue();
-  editor_js.setValue(curr);
-  window.editor_js.focus();
-  document.execCommand('copy');
-  $('#success-copy').css('display', 'block');
-});
-
-// click on race play button
-$('#race-play-btn').on('click', function() {
-  $('#race-seg').fadeOut('fast', function() {
-    $('#log-seg').fadeIn('slow');
-  });
-  $('#videoStreamCanvas').css('display', 'block');
-  $('#videoStreamCanvas').css('width', '800');
-  $('#videoStreamCanvas').css('height', '500');
-
-  var socket = io();
-  var count = 0;
-  var trackId = '';
-
-  if (selectedTrackID == 'figure8')
-    trackId = 0
-  else if (selectedTrackID == 'sky')
-    trackId = 1
-  else if (selectedTrackID == 'pond')
-    trackId = 2
-  else if (selectedTrackID == 'desk')
-    trackId = 3
-  else if (selectedTrackID == 'space')
-    trackId = 4
-  else if (selectedTrackID == 'circuit')
-    trackId = 5
-  else if (selectedTrackID == 'water')
-    trackId = 12
-  else if (selectedTrackID == 'desert')
-    trackId = 13
-  else if (selectedTrackID == 'lowearthorbit')
-    trackId = 14
-
-  var selectedVehicleTitle = editor_js.getValue();
-  var vehicle = JSON.parse(editor_js.getValue());
-
-  socket.emit('user-setup', {
-    username: username,
-    trackId: trackId,
-    userId: userId,
-    vehicleOptions: selectedVehicleTitle,
-    server: server
-  });
-
-  socket.on('race-start', function(raceID) {
-    $('#race-wait').css('display', 'none');
-    $('#race-start-btn').css('display', 'block');
-    $('#start-race').removeClass('disabled');
-    $('#start-race').on('click', function() {
-      window.open('videoStream.html?=' + raceID + "&" + server, '_blank');
-    });
-  });
-
-  socket.on('race-update', function(msg) {
-    $('#place').text(msg.place);
-    $('#lap').text(msg.lap);
-    if (count === 300) {
-      // only append a log message every 300 messages
-      $('#log-seg .ui.list').prepend('<div class="item">' + JSON.stringify(msg) + '</div>');
-      count = 0;
-    }
-    count++;
-  });
-
-  socket.on('race-end', function(raceID) {
-    $('#log-seg .ui.list').prepend('<div class="item">The race has ended</div>');
-    setTimeout(function() {
-      window.location.replace("http://" + server + "/CodeRallyWeb/racevideo.html?race_id=" + raceID);
-    }, 20000);
-  });
 });
